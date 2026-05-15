@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Visual To-Do List</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <main class="app-shell">
+    <section class="progress-card">
+      <h1>Visual To-Do List</h1>
+      <p id="progressText" class="progress-text">0% complete</p>
+      <div class="thermometer" aria-label="Completion meter" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+        <div id="thermometerFill" class="thermometer-fill"></div>
+      </div>
+    </section>
+
+    <section class="task-entry">
+      <form id="taskForm">
+        <label for="taskInput">Add task</label>
+        <div class="row">
+          <input id="taskInput" type="text" placeholder="Enter a task" required />
+          <button type="submit">Add</button>
+        </div>
+      </form>
+    </section>
+
+    <section>
+      <ul id="taskList" class="task-list"></ul>
+    </section>
+  </main>
+
+  <script src="./app.js"></script>
+</body>
+</html>
