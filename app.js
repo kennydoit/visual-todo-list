@@ -8,6 +8,10 @@ const thermometerFill = document.getElementById("thermometerFill");
 const tasks = [];
 
 function createId() {
+  if (globalThis.crypto && typeof globalThis.crypto.randomUUID === "function") {
+    return globalThis.crypto.randomUUID();
+  }
+
   return `${Date.now()}-${Math.random().toString(16).slice(2)}`;
 }
 
@@ -74,7 +78,7 @@ function render() {
       subtaskCheckbox.checked = subtask.completed;
       subtaskCheckbox.addEventListener("change", () => {
         subtask.completed = subtaskCheckbox.checked;
-        task.completed = task.subtasks.length > 0 && task.subtasks.every((entry) => entry.completed);
+        task.completed = task.subtasks.every((entry) => entry.completed);
         render();
       });
 
