@@ -9,4 +9,4 @@ A mobile-focused visual to-do list app with:
 
 ## Run
 
-Open `/home/runner/work/visual-todo-list/visual-todo-list/index.html` in a browser.
+Open `index.html` in a browser.
